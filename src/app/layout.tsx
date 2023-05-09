@@ -19,11 +19,13 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={ `
        ${nunito.className}
-        bg-gray-50 min-h-screen
+        bg-gray-50
         `}>
+        <div className='relative min-h-screen'>
         <Header />
         {children}
         <Footer />
+        </div>
       </body>
     </html>
   );
