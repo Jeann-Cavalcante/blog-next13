@@ -17,14 +17,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={ `
+      <body
+        className={`
        ${nunito.className}
         bg-gray-50
-        `}>
-        <div className='relative min-h-screen'>
-        <Header />
-        {children}
-        <Footer />
+        `}
+      >
+        <div className="relative min-h-screen">
+          <Header />
+          {children}
+          <div>
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
