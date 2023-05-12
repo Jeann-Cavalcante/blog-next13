@@ -2,29 +2,8 @@ import { GetPosts, Post } from "@/@types";
 import Link from "next/link";
 import HeaderItem from "./HeaderItem";
 
-const CardPosts = async () => {
-  const [postsAll, usersAll] = await Promise.all([
-    fetch("https://dummyjson.com/posts"),
-    fetch("https://dummyjson.com/users"),
-  ]).then((responses) => Promise.all(responses.map((res) => res.json())));
-
-  const { posts } = await postsAll;
-  const { users } = await usersAll;
-
-  const data = posts.map((post: Post) => {
-    const user = users.find((user: any) => user.id === post.userId);
-
-    if (user) {
-      return {
-        ...post,
-        name: user.firstName,
-      };
-    }
-
-    return post;
-  });
-
-
+const CardPosts = ({ data }: any) => {
+  
   console.log(data);
   const limitBody: number = 100;
 
