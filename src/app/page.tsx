@@ -26,9 +26,12 @@ export default async function Home() {
   });
 
   return (
-    <main className="max-w-[800px] mx-auto pb-16 pt-14 px-1">
-      <HeroCarousel />
-      <CardPosts data={data} />
+    <main className="max-w-[1200px] mx-auto pb-16 pt-14 px-1 flex justify-between">
+      <div className="content max-w-[744px]">
+        <HeroCarousel />
+        <CardPosts data={data} />
+      </div>
+      <PopularPosts data={data} />
     </main>
-  )
+  );
 }
