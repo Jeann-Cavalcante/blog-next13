@@ -10,11 +10,12 @@ export const metadata = {
   description: 'Blog Tech',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+ 
   return (
     <html lang="pt-br">
       <body

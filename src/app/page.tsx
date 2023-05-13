@@ -1,5 +1,6 @@
 import { Post } from "@/@types";
 import CardPosts from "@/components/CardPosts";
+import Categories from "@/components/Categories";
 import HeroCarousel from "@/components/HeroCarousel";
 import PopularPosts from "@/components/PopularPosts";
 
@@ -31,7 +32,10 @@ export default async function Home() {
         <HeroCarousel />
         <CardPosts data={data} />
       </div>
-      <PopularPosts data={data} />
+      <div className="pb-20 flex flex-col gap-y-8">
+        <PopularPosts data={postsAll.posts} />
+        <Categories data={postsAll.posts} />
+      </div>
     </main>
   );
 }
