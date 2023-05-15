@@ -2,13 +2,13 @@ import { GetPosts, Post } from "@/@types";
 import Link from "next/link";
 import HeaderItem from "./HeaderItem";
 
-const CardPosts = ({ data }: any) => {
+const CardPosts = ({ data, title }: any) => {
   
   const limitBody: number = 150;
 
   return (
     <div className="w-full flex flex-col ">
-      <HeaderItem title="Blog Tech" subtitle="Todos conteúdos" />
+      <HeaderItem title={title ?? "Blog Tech"} subtitle="Todos conteúdos" />
       <div className="flex flex-wrap md:justify-between gap-x-2 gap-y-4 justify-center">
         {data?.map((post: Post) => (
           <Link href={`/blog/${post.id}`} key={post.id}>

@@ -1,5 +1,3 @@
-import { getPosts } from "@/utils/getPosts";
-import CardPosts from "./CardPosts";
 import HeaderItem from "./HeaderItem";
 import Link from "next/link";
 
@@ -9,8 +7,6 @@ const PopularPosts = ({ data }: any) => {
    const aleatory = Math.floor(Math.random() * data.length);
    popularPosts.push(data[aleatory]);
  }
-
- console.log(popularPosts);
 
   return (
     <aside id="container-popular" className="lg:w-[380px] w-full ">
