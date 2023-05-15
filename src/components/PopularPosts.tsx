@@ -1,7 +1,12 @@
+import { Post } from "@/@types";
 import HeaderItem from "./HeaderItem";
 import Link from "next/link";
 
-const PopularPosts = ({ data }: any) => {
+type Props = {
+  data: Post[];
+}
+
+const PopularPosts = ({ data }: Props) => {
  let popularPosts = [];
  for (let i = 0; i < 3; i++) {
    const aleatory = Math.floor(Math.random() * data.length);
@@ -12,7 +17,7 @@ const PopularPosts = ({ data }: any) => {
     <aside id="container-popular" className="lg:w-[380px] w-full ">
       <HeaderItem title="Popular Posts" />
       <div className="flex flex-col gap-y-4">
-        {popularPosts?.map((post: any) => (
+        {popularPosts?.map((post: Post) => (
           <Link key={post.id} href={`/blog/${post.id}`}>
             <div className="flex w-full bg-white shadow-xl items-center p-2 rounded-md">
               <div className="bg-gray-400 h-20 min-w-[132px] rounded-md"></div>

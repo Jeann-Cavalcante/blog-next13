@@ -1,16 +1,9 @@
-import Categories from "@/components/Categories";
-import PopularPosts from "@/components/PopularPosts";
-import { getPosts } from "@/utils/getPosts";
+import { PostId } from "@/@types";
 
 const Blog = async ({params}: {params: {id: string}}) => {
-  console.log(params.id);
 
   const response = await fetch(`https://dummyjson.com/posts/${params.id}`);
-  const post = await response.json();
-  console.log(post);
-
-  const data = await getPosts();
-  console.log(post);
+  const post: PostId = await response.json();
 
   return (
     
