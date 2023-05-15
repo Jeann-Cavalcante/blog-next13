@@ -24,8 +24,6 @@ const Categories = ({data}: any) => {
         title: filter.map((item3: any) => {return {title: item3.title, id: item3.id}})})
     })
 
-    console.log(newData);
-
   return (
     <div>
       <HeaderItem title="Categorias" />

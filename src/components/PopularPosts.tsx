@@ -4,23 +4,16 @@ import HeaderItem from "./HeaderItem";
 import Link from "next/link";
 
 const PopularPosts = ({ data }: any) => {
-  const data1 = getPosts();
-  let popularPosts = [];
-  for (let i = 0; i < 3; i++) {
-    const aleatory = Math.floor(Math.random() * data.length);
-    popularPosts.push(data[aleatory]);
-  }
-  let dataInicial = new Date("2021-01-01");
-  let dataFinal = new Date("2023-12-31");
+ let popularPosts = [];
+ for (let i = 0; i < 3; i++) {
+   const aleatory = Math.floor(Math.random() * data.length);
+   popularPosts.push(data[aleatory]);
+ }
 
-  let timestamp =
-    dataInicial.getTime() +
-    Math.random() * (dataFinal.getTime() - dataInicial.getTime());
-
-  let dataAleatoria = new Date(timestamp);
+ console.log(popularPosts);
 
   return (
-    <aside id="container-popular" className="w-[380px]">
+    <aside id="container-popular" className="lg:w-[380px] w-full ">
       <HeaderItem title="Popular Posts" />
       <div className="flex flex-col gap-y-4">
         {popularPosts?.map((post: any) => (
@@ -30,7 +23,7 @@ const PopularPosts = ({ data }: any) => {
               <div className="p-1 flex flex-col justify-between">
                 <h1 className="leading-5 font-bold">{post?.title}</h1>
                 <h2 className="text-gray-800 text-sm">
-                  {new Intl.DateTimeFormat("pt-BR").format(dataAleatoria)}
+                  {post?.datePost ?? "01/01/2021"}
                 </h2>
               </div>
             </div>

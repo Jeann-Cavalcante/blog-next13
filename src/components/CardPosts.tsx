@@ -4,7 +4,7 @@ import HeaderItem from "./HeaderItem";
 
 const CardPosts = ({ data }: any) => {
   
-  const limitBody: number = 100;
+  const limitBody: number = 150;
 
   return (
     <div className="w-full flex flex-col ">
@@ -12,7 +12,7 @@ const CardPosts = ({ data }: any) => {
       <div className="flex flex-wrap md:justify-between gap-x-2 gap-y-4 justify-center">
         {data?.map((post: Post) => (
           <Link href={`/blog/${post.id}`} key={post.id}>
-            <div className="bg-white rounded-md shadow-xl w-[360px] max-h-[396px] h-[396px] overflow-hidden duration-300 hover:-translate-y-1">
+            <div className="bg-white rounded-md shadow-xl w-[360px] max-h-[396px] h-[300px] overflow-hidden duration-300 hover:-translate-y-1">
               <div className="bg-gray-400 h-40 rounded-md"></div>
               <div id="teste" className="p-1 flex flex-col gap-y-2 ">
                 <div>
