@@ -1,6 +1,6 @@
 # Sobre o projeto
 
-Este é um projeto de blog desenvolvido com Next.js, Tailwind CSS, Flowbite e TypeScript. O objetivo deste projeto é explorar as novidades incríveis da versão 13 do Next.js, que apresenta uma nova estrutura de layout  facinante.
+Este é um projeto de blog desenvolvido com Next.js, Tailwind CSS, Flowbite e TypeScript. O objetivo deste projeto é explorar as novidades incríveis da versão 13 do Next.js, que apresenta uma nova estrutura de layout fascinante.
 
 ## Layout
 
