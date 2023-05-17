@@ -5,13 +5,15 @@ import Footer from '@/components/Footer'
 import { getPosts } from '@/utils/getPosts'
 import PopularPosts from '@/components/PopularPosts'
 import Categories from '@/components/Categories'
+import { usePathname } from 'next/navigation'
 
 const nunito = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Blog Tech',
-  description: 'Blog Tech',
-}
+  title: "Blog Tech",
+  description: "Blog Tech",
+  icons: { icon: { url: "/favicon.svg", type: "image/svg" }, shortcut: { url: "/favicon.svg", type: "image/svg" }, },
+};
 
 export default async function RootLayout({
   children,
@@ -23,6 +25,7 @@ export default async function RootLayout({
  
   return (
     <html lang="pt-br">
+
       <body
         className={`
        ${nunito.className}
