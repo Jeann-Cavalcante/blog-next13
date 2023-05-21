@@ -7,7 +7,7 @@ import PopularPosts from '@/components/PopularPosts'
 import Categories from '@/components/Categories'
 import { usePathname } from 'next/navigation'
 
-const nunito = Nunito({ subsets: ['latin'] })
+const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
 
 export const metadata = {
   title: "Blog Tech",
@@ -28,8 +28,8 @@ export default async function RootLayout({
 
       <body
         className={`
-       ${nunito.className}
-        bg-gray-50
+       ${nunito.variable}
+        bg-gray-50 font-sans
         `}
       >
         <div className="relative min-h-screen">
